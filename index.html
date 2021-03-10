@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Generator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                <!-- Accordeon -->
+                <div class="accordion modifyAccordeon" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Box Style
+                            </button>
+                        </h2>
+                        <!-- show -->
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                <!--  -->
+                                <label for="boxWidth" class="form-label">Width</label>
+                                <input type="range" class="form-range" id="boxWidth" min="1" max="550">
+                                <input class="form-control" id="widthField" type="text" placeholder="Width"
+                                    aria-label="Width" readonly>
+
+                                <br>
+
+                                <label for="boxHeight" class="form-label">Height</label>
+                                <input type="range" class="form-range" id="boxHeight" min="1" max="550">
+                                <input class="form-control" id="heightField" type="text" placeholder="Height"
+                                    aria-label="Height" readonly>
+
+                                <br>
+
+                                <label for="boxBgColor" class="form-label">Background color &nbsp&nbsp</label>
+                                <input type="color" id="boxBgColor">
+                                <span id="boxBgColorSpan"></span>
+                                <!--  -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Border Style
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                <!--  -->
+                                <label for="borderWidth" class="form-label">Border Width</label>
+                                <input type="range" class="form-range" id="borderWidth" min="1" max="50">
+                                <input class="form-control" id="borderWidthField" type="text" placeholder="Border Width"
+                                    aria-label="Border Width" readonly>
+
+                                <br>
+
+                                <div class="selectContainer">
+                                    <label for="selectBorder">Border Type</label>
+                                    <select class="form-select" id="selectBorder">
+                                        <option selected value="solid">Solid</option>
+                                        <option value="double">Double</option>
+                                        <option value="dashed">Dashed</option>
+                                        <option value="dotted">Dotted</option>
+                                        <option value="groove">Groove</option>
+                                        <option value="ridge">Ridge</option>
+                                        <option value="inset">Inset</option>
+                                        <option value="outset">Outset</option>
+                                        <option value="hidden">Hidden</option>
+                                        <option value="none">None</option>
+                                    </select>
+                                </div>
+
+                                <br>
+
+                                <label for="borderColor" class="form-label">Border color &nbsp&nbsp</label>
+                                <input type="color" id="borderColor">
+                                <span id="borderColorSpan"></span>
+                                <!--  -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Border Radius
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <!--  -->
+
+                                <!-- All -->
+                                <label for="borderRadiusAll" class="form-label">Border Radius All</label>
+                                <input type="range" class="form-range" id="borderRadiusAll" min="0" max="300">
+                                <input class="form-control" id="borderRadiusAllField" type="text"
+                                    placeholder="Boder Radius All" aria-label="Boder Radius All" readonly>
+
+                                <br><br>
+
+                                <!-- Top Left -->
+                                <label for="borderRadiusTopLeft" class="form-label">Border Radius Top-Left</label>
+                                <input type="range" class="form-range" id="borderRadiusTopLeft" min="0" max="300">
+                                <input class="form-control" id="borderRadiusTopLeftField" type="text"
+                                    placeholder="Boder Radius Top-Left" aria-label="Boder Radius Top-Left" readonly>
+
+                                <br>
+                                <!-- Top Right -->
+                                <label for="borderRadiusTopRight" class="form-label">Border Radius Top-Right</label>
+                                <input type="range" class="form-range" id="borderRadiusTopRight" min="0" max="300">
+                                <input class="form-control" id="borderRadiusTopRightField" type="text"
+                                    placeholder="Boder Radius Top-Right" aria-label="Boder Radius Top-Right" readonly>
+
+                                <br>
+                                <!-- Bottom Left -->
+                                <label for="borderRadiusBottomLeft" class="form-label">Border Radius Bottom-Left</label>
+                                <input type="range" class="form-range" id="borderRadiusBottomLeft" min="0" max="300">
+                                <input class="form-control" id="borderRadiusBottomLeftField" type="text"
+                                    placeholder="Boder Radius Bottom-Left" aria-label="Boder Radius Bottom-Left"
+                                    readonly>
+
+                                <br>
+                                <!-- Bottom Right -->
+                                <label for="borderRadiusBottomRight" class="form-label">Border Radius
+                                    Bottom-Right</label>
+                                <input type="range" class="form-range" id="borderRadiusBottomRight" min="0" max="300">
+                                <input class="form-control" id="borderRadiusBottomRightField" type="text"
+                                    placeholder="Boder Radius Bottom-Right" aria-label="Boder Radius Bottom-Right"
+                                    readonly>
+                                <!--  -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Box Shadow
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <!--  -->
+                                <div class="selectContainerInset">
+                                    <label for="selectInset">Inset</label>
+                                    <select class="form-select" id="selectInset">
+                                        <option selected value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                </div>
+                                <br>
+
+                                <label for="xOffset" class="form-label">X-offset</label>
+                                <input type="range" class="form-range" id="xOffset" min="-100" max="100">
+                                <input class="form-control" id="xOffsetField" type="text" placeholder="X-offset"
+                                    aria-label="X-offset" readonly>
+                                <br>
+                                <label for="yOffset" class="form-label">Y-offset</label>
+                                <input type="range" class="form-range" id="yOffset" min="-100" max="100">
+                                <input class="form-control" id="yOffsetField" type="text" placeholder="Y-offset"
+                                    aria-label="Y-offset" readonly>
+                                <br>
+                                <label for="blurInput" class="form-label">Blur</label>
+                                <input type="range" class="form-range" id="blurInput" min="0" max="100">
+                                <input class="form-control" id="blurField" type="text" placeholder="Blur"
+                                    aria-label="Blur" readonly>
+
+                                <br>
+
+                                <label for="stretching" class="form-label">Stretching</label>
+                                <input type="range" class="form-range" id="stretching" min="0" max="100">
+                                <input class="form-control" id="stretchingField" type="text" placeholder="Stretching"
+                                    aria-label="Stretching" readonly>
+
+                                <br>
+
+                                <label for="shadowColor" class="form-label">Shadow color &nbsp&nbsp</label>
+                                <input type="color" id="shadowColor">
+                                <span id="shadowColorSpan"></span>
+                                <!--  -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFifth">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFifth" aria-expanded="false" aria-controls="collapseFifth">
+                                Transform
+                            </button>
+                        </h2>
+                        <div id="collapseFifth" class="accordion-collapse collapse" aria-labelledby="headingFifth"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <!--  -->
+                                <label for="scaleInput" class="form-label">Scale</label>
+                                <input class="form-control" id="scaleInput" type="number" placeholder="Scale"
+                                    aria-label="Scale" min="0.1" max="10" step="0.1">
+
+                                <br>
+
+                                <label for="rotateInput" class="form-label">Rotate</label>
+                                <input class="form-control" id="rotateInput" type="number" placeholder="Rotate"
+                                    aria-label="Rotate" min="1" max="10000" step="1">
+
+                                <br>
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="">Translate</span>
+                                    </div>
+                                    <input type="number" class="form-control" min="-100" max="100" id="translateX" placeholder="X">
+                                    <input type="number" class="form-control" min="-100" max="100" id="translateY" placeholder="Y">
+                                </div>
+
+                                <br>
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="">Skew &nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                                    </div>
+                                    <input type="number" class="form-control" min="-100" max="100" id="skewX" placeholder="X">
+                                    <input type="number" class="form-control" min="-100" max="100" id="skewY" placeholder="Y">
+                                </div>
+                                <!--  -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSixth">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSixth" aria-expanded="false" aria-controls="collapseSixth">
+                                Transition
+                            </button>
+                        </h2>
+                        <div id="collapseSixth" class="accordion-collapse collapse" aria-labelledby="headingSixth"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <!--  -->
+                                 
+                                <div class="selectContainerProperty">
+                                    <label for="property">Property</label>
+                                    <select class="form-select" id="property">
+                                        <option value="none" selected>None</option>
+                                        <option value="background-color">Background color</option>
+                                        <option value="width">Width</option>
+                                        <option value="height">Height</option>
+                                    </select>
+                                </div>
+
+                                <br>
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="">Duration</span>
+                                    </div>
+                                    <input type="number" class="form-control" min="1" max="100" id="duration" placeholder="Duration">
+                                    <select class="form-select" id="durationTime">
+                                        <option selected value="s">Seconds</option>
+                                        <option value="ms">Milliseconds</option>
+                                    </select>
+                                </div>
+
+                                <br>
+                                
+                                <span>Hover the element</span>
+
+                                <!--  -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--  -->
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                <div class="box-container">
+                    <div class="box" id="box">
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+
+            <div class="col-3 col-sm-3 col-md-2 col-lg-2 col-xl-2" id="btnGroup">
+                <button type="button" class="btn btn-primary btnCopy" id="btnCopy">Copy</button>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <textarea name="codeField" class="codeField" id="codeField" rows="10" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+
+    <!-- <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="block"><a href="bgcolor.html">Background color</a></div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="block"><a href="border.html">Border</a></div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="block"><a href="shadow.html">Shadow</a></div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="block"><a href="transform.html">Transform</a></div>
+            </div>
+
+
+            
+        </div>
+    </div> -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
